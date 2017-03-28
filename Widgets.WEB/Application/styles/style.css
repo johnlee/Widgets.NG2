@@ -1,0 +1,11 @@
+﻿.crop {
+    overflow: hidden;
+}
+
+div {
+    cursor: pointer;
+}
+
+thead {
+    color: #337AB7;
+}

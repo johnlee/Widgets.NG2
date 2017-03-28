@@ -1,0 +1,8 @@
+﻿<h2>Users List</h2>
+
+<ul>
+    <li *ngFor="let user of users"
+        (click)="onSelect(user)">
+        <a href="" [routerLink]="['/users', user.Id]">{{user.Name}}<br /></a>
+    </li>
+</ul>

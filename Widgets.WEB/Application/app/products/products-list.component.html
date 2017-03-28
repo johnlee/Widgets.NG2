@@ -1,0 +1,11 @@
+﻿<h2>Products List</h2>
+
+<ul>
+    <li *ngFor="let computer of computers"
+        (click)="onSelect(computer)">
+        <a href="" [routerLink]="['/products', product.Id]">{{product.Name}}<br /></a>
+    </li>
+</ul>
+
+
+

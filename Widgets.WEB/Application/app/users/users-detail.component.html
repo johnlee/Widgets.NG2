@@ -1,0 +1,11 @@
+﻿<h2>Users Detail</h2>
+
+<div *ngIf="user">
+  <div style="font-size: 18px; color:black">
+    User ID:  {{user.Id}}<br>
+    Name:  {{user.Name}}<br>
+    Created:  {{user.Created}}<br>
+  </div>
+</div>
+
+<a href="" [routerLink]="['/users']">List</a>
