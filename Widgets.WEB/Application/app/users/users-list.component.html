@@ -1,8 +1,14 @@
 ﻿<h2>Users List</h2>
 
-<ul>
-    <li *ngFor="let user of users"
-        (click)="onSelect(user)">
-        <a href="" [routerLink]="['/users', user.Id]">{{user.Name}}<br /></a>
-    </li>
-</ul>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Created</th>
+  </tr>
+  <tr *ngFor="let user of users" (click)="onSelect(user)">
+    <td><a href="" [routerLink]="['/users', user.Id]">{{user.Id}}</a></td>
+    <td><a href="" [routerLink]="['/users', user.Id]">{{user.Name}}</a></td>
+    <td><a href="" [routerLink]="['/users', user.Id]">{{user.Created}}</a></td>
+  </tr>
+</table>

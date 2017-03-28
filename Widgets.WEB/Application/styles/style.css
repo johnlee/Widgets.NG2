@@ -9,3 +9,11 @@ div {
 thead {
     color: #337AB7;
 }
+
+
+/* cellpadding */
+th, td { padding: 5px; }
+
+/* cellspacing */
+table { border-collapse: separate; border-spacing: 5px; } /* cellspacing="5" */
+

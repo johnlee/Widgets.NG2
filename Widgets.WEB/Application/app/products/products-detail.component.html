@@ -1,0 +1,13 @@
+﻿<h2>Product Detail</h2>
+
+<div *ngIf="product">
+  <div style="font-size: 18px; color:black">
+    ID:  {{product.Id}}<br>
+    Name:  {{product.Name}}<br>
+    Description:  {{product.Description}}<br>
+    Type:  {{product.Type}}<br>
+    Price:  {{product.Price}}<br>
+  </div>
+</div>
+
+<a href="" [routerLink]="['/products']">List</a>

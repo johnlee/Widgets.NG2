@@ -1,4 +1,18 @@
-﻿<h2>Orders</h2>
-<p>
-  Maecenas suscipit ullamcorper velit vulputate vulputate. Integer in ullamcorper augue. Nulla luctus tellus ut vestibulum euismod. Nunc laoreet vehicula dui, sit amet dapibus orci fermentum at. Morbi vitae libero diam. Aliquam gravida placerat vestibulum. Sed fringilla erat sed leo hendrerit gravida. Vivamus vehicula erat magna. 
-</p>
+﻿<h2>Orders List</h2>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>User</th>
+    <th>Product</th>
+    <th>Quantity</th>
+    <th>Total Price</th>
+  </tr>
+  <tr *ngFor="let order of orders">
+    <td>{{order.Id}}</td>
+    <td>{{order.User}}</td>
+    <td>{{order.Product}}</td>
+    <td>{{order.Quantity}}</td>
+    <td>{{order.TotalPrice}}</td>
+  </tr>
+</table>

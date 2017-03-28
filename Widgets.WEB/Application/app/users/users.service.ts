@@ -4,9 +4,7 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-
 import { User } from './user';
-
 
 @Injectable()
 export class UsersService {
@@ -18,15 +16,17 @@ export class UsersService {
   getUsers(): Observable<User[]> {
 
     return this.http.get(this.usersUrl)
-      .map(response => response.json() as User[]);
+      .map(response => {
+        return response.json() as User[];
+      });
 
   }
 
   getUser(id: number): Observable<User> {
 
-    return this.getUsers()
-      .map(users => users.find(user => user.Id === id));
-
-
+    return this.http.get(this.usersUrl + '/' + id)
+      .map(response => {
+        return response.json() as User;
+      });
   }
 }

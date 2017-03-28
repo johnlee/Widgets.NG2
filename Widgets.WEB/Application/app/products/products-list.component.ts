@@ -1,8 +1,8 @@
 ﻿import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
-import { ProductsService } from './products.service';
 import { Product } from './product';
+import { ProductsService } from './products.service';
 
 @Component({
   selector: 'products-list',

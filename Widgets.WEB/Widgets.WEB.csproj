@@ -23,6 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Application\app\app.component.html" />
+    <Content Include="Application\app\products\products-detail.component.html" />
     <Content Include="Application\app\products\products-list.component.html" />
     <Content Include="Application\app\dashboard\dashboard.component.html" />
     <Content Include="Application\app\orders\orders.component.html" />
@@ -58,7 +59,10 @@
     <TypeScriptCompile Include="Application\app\app.component.ts" />
     <TypeScriptCompile Include="Application\app\app.module.ts" />
     <TypeScriptCompile Include="Application\app\app.routing.ts" />
+    <TypeScriptCompile Include="Application\app\orders\order.ts" />
+    <TypeScriptCompile Include="Application\app\orders\orders.service.ts" />
     <TypeScriptCompile Include="Application\app\products\product.ts" />
+    <TypeScriptCompile Include="Application\app\products\products-detail.component.ts" />
     <TypeScriptCompile Include="Application\app\products\products-list.component.ts" />
     <TypeScriptCompile Include="Application\app\products\products.component.ts" />
     <TypeScriptCompile Include="Application\app\products\products.module.ts" />

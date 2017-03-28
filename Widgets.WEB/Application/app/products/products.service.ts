@@ -19,7 +19,13 @@ export class ProductsService {
   }
 
   getProduct(id: number): Observable<Product> {
-    return this.getProducts()
-      .map(products => products.find(product => product.Id === id));
+    return this.http.get(this.url + '/' + id)
+      .map(response => {
+        console.log(response.statusText);
+        console.log(response.json());
+        let p: Product;
+        p = response.json();
+        return p;
+      });
   }
 }
