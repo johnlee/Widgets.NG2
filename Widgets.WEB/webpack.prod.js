@@ -10,30 +10,20 @@ var helpers = require('./webpack.helpers');
 console.log('@@@@@@@@@ USING PRODUCTION @@@@@@@@@@@@@@@');
 
 module.exports = {
-
   entry: {
     'vendor': './Application/vendor.ts',
     'polyfills': './Application/polyfills.ts',
     'app': './Application/main-aot.ts' // AoT compilation
   },
-
   output: {
-    path: './wwwroot/',
+    path: __dirname + '/wwwroot/',
     filename: 'dist/[name].[hash].bundle.js',
     chunkFilename: 'dist/[id].[hash].chunk.js',
     publicPath: '/'
   },
-
   resolve: {
     extensions: ['.ts', '.js', '.json', '.css', '.scss', '.html']
   },
-
-  devServer: {
-    historyApiFallback: true,
-    stats: 'minimal',
-    outputPath: path.join(__dirname, 'wwwroot/')
-  },
-
   module: {
     rules: [
         {
@@ -89,13 +79,11 @@ module.exports = {
           {
             name: ['vendor', 'polyfills']
           }),
-
       new HtmlWebpackPlugin({
         filename: 'index.html',
         inject: 'body',
         template: 'Application/index.html'
       }),
-
       new CopyWebpackPlugin([
           { from: './Application/images/*.*', to: 'assets/', flatten: true }
       ])

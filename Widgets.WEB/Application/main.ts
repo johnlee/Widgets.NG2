@@ -5,7 +5,6 @@ import './favicon.ico';
 import './styles/style.css';
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
 import { AppModule } from './app/app.module';
 
 // Enables Hot Module Replacement.

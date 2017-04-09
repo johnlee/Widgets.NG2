@@ -9,7 +9,8 @@ import { Product } from './product';
 @Injectable()
 export class ProductsService {
 
-  private url = 'http://localhost:18334/Products';
+  //private url = 'http://localhost:18334/Products';
+  private url = 'https://solidfishapi.azurewebsites.net/Products';
 
   constructor(private http: Http) { }
 

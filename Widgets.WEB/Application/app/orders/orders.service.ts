@@ -9,7 +9,8 @@ import { Order } from './order';
 @Injectable()
 export class OrdersService {
 
-  private url = 'http://localhost:18334/Orders';
+  //private url = 'http://localhost:18334/Orders';
+  private url = 'https://solidfishapi.azurewebsites.net/Orders';
 
   constructor(private http: Http) { }
 

@@ -3,6 +3,7 @@ import { PreloadAllModules, Routes, RouterModule } from '@angular/router';
 
 import { PageNotFoundComponent } from './404.component';
 
+// Using Lazy Loading for each of the feature modules
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'dashboard', },
   { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },

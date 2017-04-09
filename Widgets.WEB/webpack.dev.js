@@ -11,28 +11,11 @@ var helpers = require('./webpack.helpers');
 console.log('@@@@@@@@@ USING DEVELOPMENT @@@@@@@@@@@@@@@');
 
 module.exports = {
-
+  // Dev specific configs
   devtool: 'source-map',
   performance: {
     hints: false
   },
-  entry: {
-    'polyfills': './Application/polyfills.ts',
-    'vendor': './Application/vendor.ts',
-    'app': './Application/main.ts'
-  },
-
-  output: {
-    path: __dirname + '/wwwroot/',
-    filename: 'dist/[name].bundle.js',
-    chunkFilename: 'dist/[id].chunk.js',
-    publicPath: '/'
-  },
-
-  resolve: {
-    extensions: ['.ts', '.js', '.json', '.css', '.scss', '.html']
-  },
-
   devServer: {
     historyApiFallback: true,
     contentBase: path.join(__dirname, '/wwwroot/'),
@@ -41,7 +24,21 @@ module.exports = {
       poll: 1000
     }
   },
-
+  // Main config
+  entry: {
+    'polyfills': './Application/polyfills.ts',
+    'vendor': './Application/vendor.ts',
+    'app': './Application/main.ts'
+  },
+  output: {
+    path: __dirname + '/wwwroot/',
+    filename: 'dist/[name].bundle.js',
+    chunkFilename: 'dist/[id].chunk.js',
+    publicPath: '/'
+  },
+  resolve: {
+    extensions: ['.ts', '.js', '.json', '.css', '.scss', '.html']
+  },
   module: {
     rules: [
         {
@@ -79,27 +76,24 @@ module.exports = {
     exprContextCritical: false
   },
   plugins: [
-      new webpack.optimize.CommonsChunkPlugin({ name: ['vendor', 'polyfills'] }),
-
-      new WebpackNotifierPlugin(),
-
       new CleanWebpackPlugin(
           [
               './wwwroot/dist',
               './wwwroot/assets'
           ]
       ),
-
+      new webpack.optimize.CommonsChunkPlugin(
+        { name: ['vendor', 'polyfills'] }
+      ),
+      new WebpackNotifierPlugin(),
       new HtmlWebpackPlugin({
         filename: 'index.html',
         inject: 'body',
         template: 'Application/index.html'
       }),
-
       new CopyWebpackPlugin([
           { from: './Application/images/*.*', to: 'assets/', flatten: true }
       ])
   ]
-
 };
 

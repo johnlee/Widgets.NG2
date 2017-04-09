@@ -33,7 +33,6 @@
     <Content Include="Application\favicon.ico" />
     <Content Include="Application\index.html" />
     <Content Include="Application\styles\style.css" />
-    <Content Include="web.config" />
     <Content Include="webpack.helpers.js" />
     <Content Include="webpack.config.js" />
     <Content Include="webpack.prod.js" />
@@ -44,12 +43,6 @@
     <Content Include="tsconfig.json" />
     <Content Include="tsconfig-aot.json" />
     <Content Include="tslint.json" />
-    <None Include="web.Debug.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
-    <None Include="web.Release.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Application\images\" />

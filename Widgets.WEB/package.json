@@ -8,7 +8,6 @@
     "type": "git",
     "url": "https://github.com/johnlee/ng2demo.git"
   },
-
   "devDependencies": {
     "@types/node": "7.0.8",
     "angular2-template-loader": "0.6.2",
@@ -36,17 +35,16 @@
     "webpack-notifier": "^1.5.0",
     "webpack-dev-server": "2.4.1"
   },
-
   "dependencies": {
     "@angular/common": "~2.4.10",
     "@angular/compiler": "~2.4.10",
-    "@angular/compiler-cli": "~2.4.10",
-    "@angular/platform-server": "~2.4.10",
+    "@angular/compiler-cli": "^2.4.10",
     "@angular/core": "~2.4.10",
     "@angular/forms": "~2.4.10",
     "@angular/http": "~2.4.10",
     "@angular/platform-browser": "~2.4.10",
     "@angular/platform-browser-dynamic": "~2.4.10",
+    "@angular/platform-server": "^2.4.10",
     "@angular/router": "~3.4.10",
     "@angular/upgrade": "~2.4.10",
     "angular-in-memory-web-api": "0.3.1",
@@ -58,7 +56,6 @@
     "rxjs": "5.2.0",
     "zone.js": "0.7.2"
   },
-
   "scripts": {
     "build-dev": "npm run webpack-dev",
     "build-production": "npm run ngc && npm run webpack-production",
@@ -66,13 +63,12 @@
     "getNodeVersion": "node -v",
     "ngc": "ngc -p ./tsconfig-aot.json",
     "publish-for-iis": "npm run build-production && dotnet publish -c Release",
-    "start": "concurrently \"webpack-dev-server --hot --inline --open --port 8080\" \"dotnet run\" ",
+    "start": "concurrently \"webpack-dev-server --hot --inline --open --port 8080\"",
     "watch-webpack-dev": "set NODE_ENV=development && webpack --watch --color",
     "watch-webpack-production": "npm run build-production --watch --color",
     "webpack-dev": "set NODE_ENV=development && webpack",
     "webpack-production": "set NODE_ENV=production && webpack"
   },
-
   "-vs-binding": {
     "ProjectOpened": []
   }

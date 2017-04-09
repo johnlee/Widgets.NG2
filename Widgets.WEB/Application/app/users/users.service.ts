@@ -9,7 +9,8 @@ import { User } from './user';
 @Injectable()
 export class UsersService {
 
-  private usersUrl = 'http://localhost:18334/Users';
+  //private usersUrl = 'http://localhost:18334/Users';
+  private usersUrl = 'https://solidfishapi.azurewebsites.net/Users';
 
   constructor(private http: Http) { }
 
